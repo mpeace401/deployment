@@ -34,10 +34,17 @@ class ItemsController < ApplicationController
   end
 
   def delete
-    @item = Items.find(params[:id])
+    @item = Item.find(params[:id])
   end
 
   def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+
+    respond_to do |format|
+      format.html { redirect_to items_url, notice: "Item was successfully removed." }
+      format.json { head :no_content }
+    end
   end
 
   private
