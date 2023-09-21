@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item = Item.find(params[:id])
   end
 
   def new
@@ -15,6 +16,18 @@ class ItemsController < ApplicationController
   end
 
   def create
+    @item = Item.new(item_params)
+    @item.available = true
+    respond_to do |format|
+      if @item.save
+        format.html { redirect_to item_url(@item), notice: "Item was successfully created." }
+        format.json { render :show, status: :created, location: @item }
+        flash[:notice] = "Successfully created item"
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @item.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def update
@@ -26,4 +39,9 @@ class ItemsController < ApplicationController
 
   def destroy
   end
+
+  private
+    def item_params 
+      params.require(:item).permit(:name, :serial_number, :description)
+    end
 end

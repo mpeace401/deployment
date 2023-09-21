@@ -1,2 +1,16 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+<p style="color: green"><%= notice %></p>
+
+<h1>Inventory</h1>
+
+<div id="items">
+  <% @items.each do |item| %>
+    <%= render item %>
+    <p>
+      <%= link_to "Show", item %>
+      <%= link_to "Edit", edit_item_path(item) %>
+      <%= link_to "Delete", delete_item_path(item) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Add Item", new_item_path %>
