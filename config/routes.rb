@@ -10,5 +10,5 @@ Rails.application.routes.draw do
       get :delete
     end
   end
-
+  get 'member-items', to: 'items#member_items'
 end

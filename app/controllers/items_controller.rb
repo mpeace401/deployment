@@ -54,6 +54,10 @@ class ItemsController < ApplicationController
     end
   end
 
+  def member_items
+    @items = Item.where(available: true)
+  end
+
   private
     def item_params 
       params.require(:item).permit(:name, :serial_number, :description)
