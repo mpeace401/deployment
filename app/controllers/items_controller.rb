@@ -18,7 +18,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @item.available = true
-    count = Item.count + 1
+    count = Item.last.id + 1
     @item.id = count
     respond_to do |format|
       if @item.save
