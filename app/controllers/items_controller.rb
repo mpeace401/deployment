@@ -18,8 +18,13 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @item.available = true
-    count = Item.last.id + 1
-    @item.id = count
+    if Item.count != 0
+      count = Item.last.id + 1
+      @item.id = count
+    else
+      @item.id = 1
+    end
+    
     respond_to do |format|
       if @item.save
         format.html { redirect_to item_url(@item), notice: "Item was successfully created." }
