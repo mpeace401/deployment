@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
   end
 
   def new
-    @item = Item.new
+    @item = Item.new()
   end
 
   def edit
@@ -18,6 +18,8 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @item.available = true
+    count = Item.count + 1
+    @item.id = count
     respond_to do |format|
       if @item.save
         format.html { redirect_to item_url(@item), notice: "Item was successfully created." }
