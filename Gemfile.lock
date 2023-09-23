@@ -92,6 +92,8 @@ GEM
       reline (>= 0.3.1)
     diff-lcs (1.5.0)
     docile (1.4.0)
+    erb-formatter (0.4.3)
+      syntax_tree (~> 6.0)
     erubi (1.12.0)
     ffi (1.15.5)
     ffi (1.15.5-x64-mingw-ucrt)
@@ -145,6 +147,7 @@ GEM
       racc
     pg (1.5.4)
     pg (1.5.4-x64-mingw-ucrt)
+    prettier_print (1.2.1)
     psych (5.1.0)
       stringio
     public_suffix (5.0.3)
@@ -261,6 +264,8 @@ GEM
     stimulus-rails (1.2.2)
       railties (>= 6.0.0)
     stringio (3.0.8)
+    syntax_tree (6.2.0)
+      prettier_print (>= 1.2.0)
     thor (1.2.2)
     tilt (2.2.0)
     timeout (0.4.0)
@@ -308,6 +313,7 @@ DEPENDENCIES
   brakeman
   capybara
   debug
+  erb-formatter
   importmap-rails
   jbuilder
   pg (~> 1.1)

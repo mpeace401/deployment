@@ -93,3 +93,4 @@ gem 'yaml_db'
 
 gem 'brakeman'
 gem 'rubocop'
+gem 'erb-formatter'
