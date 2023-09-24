@@ -11,17 +11,18 @@
 
     <div class="field">
       <%= f.label :lname, "Last Name:" %><br/>
-      <%= f.text_field :lname, autofocus: true %>
+      <%= f.text_field :lname %>
     </div>
 
     <div class="field">
-      <%= f.label :role , "Role:"%><br/>
-      <%= f.text_field :role, autofocus: true %>
+      <%= f.label :role %><br />
+      <%= f.select :role, options_for_select(['Admin', 'Member'], f.object.role) %>
     </div>
+
 
     <div class="field">
       <%= f.label :email, "Email" %><br/>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, autocomplete: "email" %>
     </div>
 
     <div class="field">
