@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: "items#index"
-  resources :users
   resources :comments
   resources :posts do
     resources :comments
@@ -12,3 +12,5 @@ Rails.application.routes.draw do
   end
   get 'member-items', to: 'items#member_items'
 end
+
+
