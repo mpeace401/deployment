@@ -13,7 +13,13 @@ Rails.application.routes.draw do
       get :delete
     end
   end
+  resources :transactions do
+    member do
+      get :delete
+    end
+  end
   get 'member-items', to: 'items#member_items'
+  get 'transactions', to: 'transactions#index'
 end
 
 
