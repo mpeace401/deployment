@@ -12,7 +12,6 @@
       <%= current_user.fname %>
     </a>
     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
-
       <li class="nav-item">
         <%= link_to "Edit Account", edit_user_registration_path, class: "dropdown-item" %>
       </li>
@@ -23,7 +22,6 @@
         method: :delete,
         class: "dropdown-item" %>
       </li>
-      
     </ul>
   </li>
 <% else %>
