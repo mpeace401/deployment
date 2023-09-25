@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :fname, presence: true
-  validates :lname, presence: true
-  validates :role, presence: true
+  validates :fname, :lname, :role, presence: true
+  def admin?
+    role == 'Admin'
+  end
 end

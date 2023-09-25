@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # if user is not an admin, going to /admins will give 404 error
+  authenticated :user, -> (user) { user.admin? } do
+    get 'admin', to: 'admin#index'
+    get 'admin/users'
+  end
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
