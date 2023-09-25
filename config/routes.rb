@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     end
   end
   get 'member-items', to: 'items#member_items'
+  get 'transactions', to: 'transactions#index'
 end
 
 
