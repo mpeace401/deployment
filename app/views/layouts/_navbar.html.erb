@@ -20,15 +20,18 @@
         <li class="nav-item">
           <%= link_to "Member Inventory", member_items_path, class: "nav-link" %>
         </li>
-        <% if current_user && current_user.role == 'Admin' %>
+        <li class="nav-item">
+            <%= link_to "Transactions", transactions_path, class: 'nav-link' %>
+        </li>
+       <% if current_user && current_user.role == 'Admin' %>
           <li class="nav-item">
             <%= link_to "Admin Dashboard", admin_path, class: "nav-link" %>
           </li>
         <% end %>
-      </ul>
-      <ul class="navbar-nav">
-        <%= render "users/session_manager" %>
-      </ul>
+      </ul>  
+      <ul class="navbar-nav"> 
+        <%= render 'users/session_manager' %>
+      </ul> 
     </div>
   </div>
 </nav>

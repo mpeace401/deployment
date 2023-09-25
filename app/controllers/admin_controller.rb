@@ -3,6 +3,6 @@ class AdminController < ApplicationController
   end
   
   def users
-    @users = User.all  
+    @users = User.all 
   end
 end
