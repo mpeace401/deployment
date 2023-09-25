@@ -33,12 +33,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_24_201228) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "transactions", force: :cascade do |t|
-    t.string "email"
-    t.string "serial_number"
-    t.datetime "checkout_time", null: false
-  end
-
   create_table "posts", force: :cascade do |t|
     t.text "title"
     t.text "body"
@@ -49,6 +43,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_24_201228) do
     t.integer "clicks"
     t.datetime "last_reviewed_at", precision: nil
     t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.string "email"
+    t.string "serial_number"
   end
 
   create_table "users", force: :cascade do |t|

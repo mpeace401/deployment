@@ -3,7 +3,7 @@
 
   <div id="transactions">
     <% @transactions.each do |transaction| %>
-      <%= render item %>
+      <%= render transaction %>
       <p>
         <%= link_to "Show", transaction %>
         <%= link_to "Edit", edit_transaction_path(transaction) %>
