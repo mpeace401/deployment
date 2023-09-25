@@ -22,7 +22,7 @@
         </li>
         <li class="nav-item">
             <%= link_to "Transactions", transactions_path, class: 'nav-link' %>
-        </li>
+       </li>
        <% if current_user && current_user.role == 'Admin' %>
           <li class="nav-item">
             <%= link_to "Admin Dashboard", admin_path, class: "nav-link" %>
