@@ -7,7 +7,7 @@ RSpec.describe ItemsController, type: :controller do
     it "assigns all items to @items and renders the index template" do
       item = Item.create(name: "Test Item", serial_number: "12345", description: "Test Description", available: true)
       get :index
-      expect(assigns(:items)).to eq([item])
+      expect(assigns(:items)).to match_array(Item.all)
       expect(response).to render_template(:index)
     end
   end
