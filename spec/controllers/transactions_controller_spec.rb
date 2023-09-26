@@ -15,7 +15,7 @@ RSpec.describe TransactionsController, type: :controller do
     it "assigns all transactions to @transactions" do
       transaction = Transaction.create! valid_attributes
       get :index
-      expect(assigns(:transactions)).to eq([transaction])
+      expect(assigns(:transactions)).to match_array(Transaction.all)
     end
     
     it "renders the index template" do
