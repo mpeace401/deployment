@@ -68,6 +68,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 #  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw ]
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -95,3 +96,4 @@ gem 'brakeman'
 gem 'rubocop'
 gem 'erb-formatter'
 gem 'devise'
+gem 'rails-controller-testing'

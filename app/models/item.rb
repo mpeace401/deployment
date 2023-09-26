@@ -1,3 +1,4 @@
 class Item < ApplicationRecord
-    validates :name, :serial_number, presence: true
-end
+    validates :name, :description, :serial_number, :available, presence: true
+  end
+  
