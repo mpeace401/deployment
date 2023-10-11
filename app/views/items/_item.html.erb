@@ -11,7 +11,7 @@
     </p>
     <%# Display resized item image if attached, otherwise show placeholder. %>
     <% if item.image.attached? %>
-      <%= image_tag item.image.variant(resize: "100x100"), class: "card-img-top mb-3" %>
+      <%= image_tag item.image, class: "card-img-bottom mb-3" %>
     <% else %>
       <%= image_tag "placeholderRadio.png", size: "25x", class: "mx-auto d-block" %>
     <% end %>
