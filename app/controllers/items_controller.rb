@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  
+
   def index
     @items = Item.all
   end
@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
     else
       @item.id = 1
     end
-    
+
     respond_to do |format|
       if @item.save
         format.html { redirect_to item_url(@item), notice: "Item was successfully created." }
@@ -59,7 +59,8 @@ class ItemsController < ApplicationController
   end
 
   private
-    def item_params 
-      params.require(:item).permit(:name, :serial_number, :description)
+    # permitted paramaters for CRUD model
+    def item_params
+      params.require(:item).permit(:name, :serial_number, :description, :image)
     end
 end
