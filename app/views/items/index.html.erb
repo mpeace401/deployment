@@ -1,6 +1,7 @@
 <div class="container">
   <h1>Inventory</h1>
-
+  <%= link_to "Add Item", new_item_path %>
+  <%= link_to "View Member Items", member_items_path %>
   <div id="items">
     <% @items.each do |item| %>
       <%= render item %>
@@ -11,7 +12,4 @@
       </p>
     <% end %>
   </div>
-
-  <%= link_to "Add Item", new_item_path %>
-  <%= link_to "View Member Items", member_items_path %>
 </div>
