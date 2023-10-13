@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   root to: "items#index"
 
+  get '/items/export', to:'items#export' 
+
   resources :items do
     member do
       get :delete
@@ -28,4 +30,5 @@ Rails.application.routes.draw do
   end
   get 'member-items', to: 'items#member_items'
   get 'transactions', to: 'transactions#index'
+  # get 'items/export', to: 'items#export'
 end

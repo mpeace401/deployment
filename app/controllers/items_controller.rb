@@ -58,6 +58,15 @@ class ItemsController < ApplicationController
     @items = Item.where(available: true)
   end
 
+  def export
+    @items = Item.all
+
+    # respond_to do |format|
+    #   format.csv {send_data @items.to_csv, filename: "items-#{Date.today}.csv"}
+    # end
+    send_data @items.to_csv, filename: "items-#{Date.today}.csv"
+  end
+  
   private
     def item_params 
       params.require(:item).permit(:name, :serial_number, :description)
