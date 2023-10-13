@@ -13,6 +13,7 @@
     <% if item.image.attached? %>
       <%= image_tag item.image, class: "card-img-bottom mb-3" %>
     <% else %>
+      <%# Placeholder image for testing purposes %>
       <%= image_tag "placeholderRadio.png", size: "25x", class: "mx-auto d-block" %>
     <% end %>
   </div>
