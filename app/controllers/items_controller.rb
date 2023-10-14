@@ -66,6 +66,31 @@ class ItemsController < ApplicationController
     # end
     send_data @items.to_csv, filename: "items-#{Date.today}.csv"
   end
+
+  def import
+    if params[:file].present?
+      csv_text = File.read(params[:file].path)
+      csv = CSV.parse(csv_text, headers: true)
+      csv.each do |row|
+        item_hash = row.to_hash
+        item_hash["available"] = case item_hash["available"].downcase.strip
+                                 when 'true', 't', '1'
+                                   true
+                                 else 
+                                   false # Default value when it's not explicitly true.
+                                 end
+        
+        item = Item.find_or_initialize_by(id: item_hash["id"])
+        item.update!(item_hash)
+      end
+  
+      redirect_to items_path, notice: "Items imported successfully!"
+    else
+      redirect_to items_path, alert: "Please upload a CSV file."
+    end
+  rescue ActiveRecord::RecordInvalid => e
+    redirect_to items_path, alert: "There was an issue with importing items. Error: #{e.message}"
+  end   
   
   private
     def item_params 

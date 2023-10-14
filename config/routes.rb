@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   root to: "items#index"
 
   get '/items/export', to:'items#export' 
+  post 'items/import', to: 'items#import', as: 'import_items'
 
   resources :items do
     member do
@@ -30,5 +31,4 @@ Rails.application.routes.draw do
   end
   get 'member-items', to: 'items#member_items'
   get 'transactions', to: 'transactions#index'
-  # get 'items/export', to: 'items#export'
 end
