@@ -19,12 +19,14 @@ Rails.application.routes.draw do
   #get '/items/export', to:'items#export' 
   #post 'items/import', to: 'items#import', as: 'import_items'
 
-  post 'items/checkout', to: 'items#checkout', as: 'import_items'
-  post 'button_action/:id', to: 'items#button_action'
+  put 'items/:id/checkout', to: 'items#checkout', as: 'checkout_item'
+  #post 'button_action/:id', to: 'items#button_action'
 
   resources :items do
     member do
       get :delete
+      put 'checkout'
+      get 'checkout'
       #post :button_action
     end
   end

@@ -67,7 +67,7 @@ class ItemsController < ApplicationController
     end
   end
 
-  def button_action
+  def checkout
     @item = Item.find(params[:id])
     @item.update_attribute(:available, false)
     redirect_to items_path

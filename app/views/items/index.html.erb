@@ -9,8 +9,9 @@
         <%= link_to "Show", item %>
         <%= link_to "Edit", edit_item_path(item) %>
         <%= link_to "Delete", delete_item_path(item) %>
-        <%= link_to 'Checkout', items_export_path, class: "button" %>
-        #<%= button_to "Checkout", "button_action", method: :post, class: "btn" %>
+        <%= link_to 'Checkout', checkout_item_path(item), method: :put, class: "button" %>
+        
+        <!--#<%= button_to "Checkout", "button_action", method: :post, class: "btn" %>-->
       </p>
     <% end %>
   </div>
