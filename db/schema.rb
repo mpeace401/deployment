@@ -54,6 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_14_183451) do
   create_table "transactions", force: :cascade do |t|
     t.string "email"
     t.string "serial_number"
+    t.boolean "approved"
   end
 
   create_table "users", force: :cascade do |t|

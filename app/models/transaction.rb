@@ -1,3 +1,3 @@
 class Transaction < ApplicationRecord
-    validates :email, :serial_number, presence: true
+    validates :email, :serial_number, :approved, presence: true
 end

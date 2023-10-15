@@ -3,6 +3,7 @@ class Transactions < ActiveRecord::Migration[7.0]
     create_table :transactions do |t|
       t.string :email
       t.string :serial_number
+      t.boolean :approved
 
       t.timestamps
     end
