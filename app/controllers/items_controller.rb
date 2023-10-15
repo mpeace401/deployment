@@ -69,8 +69,18 @@ class ItemsController < ApplicationController
 
   def checkout
     @item = Item.find(params[:id])
-    @item.update_attribute(:available, false)
-    redirect_to items_path
+  
+    if @item.available
+      # Mark the item as unavailable
+      @item.update_attribute(:available, false)
+  
+      # Create a new Transaction entry with the item's serial_number
+      Transaction.create(email: 'ekennedy@tamu.edu', serial_number: @item.serial_number)
+      
+      redirect_to items_path, notice: "Item checked out and transaction created."
+    else
+      redirect_to items_path, alert: "Item is already checked out."
+    end
   end
 
   # Display all items that are available
