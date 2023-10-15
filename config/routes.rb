@@ -16,9 +16,16 @@ Rails.application.routes.draw do
 
   root to: "items#index"
 
+  #get '/items/export', to:'items#export' 
+  #post 'items/import', to: 'items#import', as: 'import_items'
+
+  post 'items/checkout', to: 'items#checkout', as: 'import_items'
+  post 'button_action/:id', to: 'items#button_action'
+
   resources :items do
     member do
       get :delete
+      #post :button_action
     end
   end
   resources :transactions do
@@ -26,6 +33,10 @@ Rails.application.routes.draw do
       get :delete
     end
   end
+
   get 'member-items', to: 'items#member_items'
   get 'transactions', to: 'transactions#index'
+  
+  #post 'button_action2/:id', to: 'transactions#button_action2'
+  #get 'button_action', to: 'items#index'
 end

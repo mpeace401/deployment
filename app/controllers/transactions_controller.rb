@@ -39,6 +39,7 @@ class TransactionsController < ApplicationController
   
     def update
     end
+
   
     def delete
       @transaction = Transaction.find(params[:id])

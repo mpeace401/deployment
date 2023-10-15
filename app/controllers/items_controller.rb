@@ -49,6 +49,7 @@ class ItemsController < ApplicationController
   # Update an item's details
   def update
   end
+  
 
   # Confirm deletion of an item
   def delete
@@ -66,6 +67,12 @@ class ItemsController < ApplicationController
     end
   end
 
+  def button_action
+    @item = Item.find(params[:id])
+    @item.update_attribute(:available, false)
+    redirect_to items_path
+  end
+
   # Display all items that are available
   def member_items
     @items = Item.where(available: true)
@@ -75,6 +82,6 @@ class ItemsController < ApplicationController
 
     # Strong parameters for item to prevent mass-assignment vulnerabilities
     def item_params
-      params.require(:item).permit(:name, :serial_number, :description, :image)
+      params.require(:item).permit(:name, :serial_number, :description, :image, :available)
     end
 end
