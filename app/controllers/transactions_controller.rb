@@ -17,7 +17,6 @@ class TransactionsController < ApplicationController
   
     def create
       @transaction = Transaction.new(transaction_params)
-      #@transaction.available = true
       if Transaction.count != 0
         count = Transaction.last.id + 1
         @transaction.id = count
