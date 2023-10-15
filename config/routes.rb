@@ -30,9 +30,14 @@ Rails.application.routes.draw do
       #post :button_action
     end
   end
+
+  put 'transactions/:id/approve', to: 'transactions#approve', as: 'approve_transaction'
+
   resources :transactions do
     member do
       get :delete
+      put 'approve'
+      get 'approve'
     end
   end
 

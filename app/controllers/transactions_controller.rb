@@ -54,6 +54,12 @@ class TransactionsController < ApplicationController
         format.json { head :no_content }
       end
     end
+
+    def approve
+      @transaction = Transaction.find(params[:id])
+    
+      redirect_to transactions_path, notice: "Transaction was approved."
+    end
   
     private
       def transaction_params 
