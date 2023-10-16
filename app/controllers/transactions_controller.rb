@@ -30,7 +30,7 @@ class TransactionsController < ApplicationController
           format.html { redirect_to transaction_url(@transaction), notice: "Transaction was successfully created." }
           format.json { render :show, status: :created, location: @transaction }
           #call mailer
-          UserMailer.with(user: @transaction.email, item: @transaction.serial_number).checkout_email.deliver_now
+          UserMailer.with(user: @transaction.email, item: @transaction.serial_number).checkout_email.deliver_later
           flash[:notice] = "Successfully created transaction"
         else
           format.html { render :new, status: :unprocessable_entity }
