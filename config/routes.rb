@@ -16,6 +16,9 @@ Rails.application.routes.draw do
 
   root to: "items#index"
 
+  get '/items/export', to:'items#export' 
+  post 'items/import', to: 'items#import', as: 'import_items'
+
   resources :items do
     member do
       get :delete

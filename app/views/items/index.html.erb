@@ -12,4 +12,12 @@
       </p>
     <% end %>
   </div>
+  
+  <%= link_to "Add Item", new_item_path %>
+  <%= link_to "View Member Items", member_items_path %>
+  <%= link_to 'Export Items', items_export_path, class: "button" %>
+  <%= form_tag import_items_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import" %>
+  <% end %>
 </div>
