@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Maintenance items</h1>
+
+<div id="maintenance_items">
+  <% @maintenance_items.each do |maintenance_item| %>
+    <%= render maintenance_item %>
+    <p>
+      <%= link_to "Show this maintenance item", maintenance_item %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New maintenance item", new_maintenance_item_path %>

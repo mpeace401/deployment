@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   get 'users/index'
   get 'users/edit'
+
+  resources :maintenance_items
+
   # if user is not an admin, going to /admins will give 404 error
   authenticated :user, -> (user) { user.admin? } do
     get 'admin', to: 'admin#index'
@@ -29,6 +32,7 @@ Rails.application.routes.draw do
       get :delete
     end
   end
+
   get 'member-items', to: 'items#member_items'
   get 'transactions', to: 'transactions#index'
 end
