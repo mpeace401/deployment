@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-    default from: 'notfications@radioclub.com'
+    default from: 'w5ac.notifcations@gmail.com'
 
     def welcome_email
         @user = params[:user]
@@ -10,6 +10,6 @@ class UserMailer < ApplicationMailer
     def checkout_email
         @user = params[:user]
         @item = params[:item]
-        mail(to: @user.email, subject: 'TAMU Amateur Radio Club Checkout Policy')
+        mail(to: @user, subject: 'TAMU Amateur Radio Club Checkout Policy')
     end
 end
