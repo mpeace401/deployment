@@ -3,7 +3,10 @@
   <%# Testing google oauth %>
   <div class="alert alert-info" role="alert">
   <p>You're logged in! Welcome to the Item Dashboard!</p>
-  <%= link_to "Sign Out", destroy_user_session_path, class: "btn btn-warning" %>
+   <%= button_to "Sign Out",
+        destroy_user_session_path,
+        method: :delete,
+        class: "btn btn-warning" %>
 </div>
 
   <%= link_to "Add Item", new_item_path %>
