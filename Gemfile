@@ -97,3 +97,6 @@ gem 'rubocop'
 gem 'erb-formatter'
 gem 'devise'
 gem 'rails-controller-testing'
+# Use Active Storage variant
+gem 'image_processing', '~> 1.2'
+gem 'mini_magick'

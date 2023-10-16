@@ -15,12 +15,7 @@ Rails.application.routes.draw do
   }
 
   root to: "items#index"
-  resources :comments
 
-  resources :posts do
-    resources :comments
-  end
-  
   resources :items do
     member do
       get :delete
@@ -34,5 +29,3 @@ Rails.application.routes.draw do
   get 'member-items', to: 'items#member_items'
   get 'transactions', to: 'transactions#index'
 end
-
-
