@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'users/index'
-  get 'users/edit'
+  # get 'users/edit'
   # if user is not an admin, going to /admins will give 404 error
   authenticated :user, -> (user) { user.admin? } do
     get 'admin', to: 'admin#index'
