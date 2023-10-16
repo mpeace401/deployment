@@ -96,6 +96,8 @@ gem 'brakeman'
 gem 'rubocop'
 gem 'erb-formatter'
 gem 'devise'
+gem 'omniauth', '~>1.9.1'
+gem 'omniauth-google-oauth2'
 gem 'rails-controller-testing'
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
