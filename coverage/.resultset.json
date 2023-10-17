@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/TAMUPROJ/spec/controllers/admin_controller_spec.rb": {
+      "/tamuRadioClub/spec/controllers/admin_controller_spec.rb": {
         "lines": [
           null,
           1,
@@ -65,7 +65,7 @@
           null
         ]
       },
-      "/TAMUPROJ/spec/rails_helper.rb": {
+      "/tamuRadioClub/spec/rails_helper.rb": {
         "lines": [
           null,
           1,
@@ -134,7 +134,7 @@
           null
         ]
       },
-      "/TAMUPROJ/config/environment.rb": {
+      "/tamuRadioClub/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -143,7 +143,7 @@
           1
         ]
       },
-      "/TAMUPROJ/config/application.rb": {
+      "/tamuRadioClub/config/application.rb": {
         "lines": [
           1,
           null,
@@ -185,7 +185,7 @@
           null
         ]
       },
-      "/TAMUPROJ/config/boot.rb": {
+      "/tamuRadioClub/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -193,7 +193,7 @@
           1
         ]
       },
-      "/TAMUPROJ/config/environments/test.rb": {
+      "/tamuRadioClub/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -254,10 +254,23 @@
           null,
           null,
           null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
-      "/TAMUPROJ/config/initializers/application_controller_renderer.rb": {
+      "/tamuRadioClub/config/initializers/application_controller_renderer.rb": {
         "lines": [
           null,
           null,
@@ -269,7 +282,7 @@
           null
         ]
       },
-      "/TAMUPROJ/config/initializers/assets.rb": {
+      "/tamuRadioClub/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -287,7 +300,7 @@
           null
         ]
       },
-      "/TAMUPROJ/config/initializers/backtrace_silencers.rb": {
+      "/tamuRadioClub/config/initializers/backtrace_silencers.rb": {
         "lines": [
           null,
           null,
@@ -299,7 +312,7 @@
           1
         ]
       },
-      "/TAMUPROJ/config/initializers/content_security_policy.rb": {
+      "/tamuRadioClub/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -333,7 +346,7 @@
           null
         ]
       },
-      "/TAMUPROJ/config/initializers/cookies_serializer.rb": {
+      "/tamuRadioClub/config/initializers/cookies_serializer.rb": {
         "lines": [
           null,
           null,
@@ -342,7 +355,7 @@
           1
         ]
       },
-      "/TAMUPROJ/config/initializers/devise.rb": {
+      "/tamuRadioClub/config/initializers/devise.rb": {
         "lines": [
           null,
           null,
@@ -659,7 +672,7 @@
           null
         ]
       },
-      "/TAMUPROJ/config/initializers/filter_parameter_logging.rb": {
+      "/tamuRadioClub/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -669,7 +682,7 @@
           null
         ]
       },
-      "/TAMUPROJ/config/initializers/inflections.rb": {
+      "/tamuRadioClub/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -689,7 +702,7 @@
           null
         ]
       },
-      "/TAMUPROJ/config/initializers/mime_types.rb": {
+      "/tamuRadioClub/config/initializers/mime_types.rb": {
         "lines": [
           null,
           null,
@@ -697,7 +710,7 @@
           null
         ]
       },
-      "/TAMUPROJ/config/initializers/permissions_policy.rb": {
+      "/tamuRadioClub/config/initializers/permissions_policy.rb": {
         "lines": [
           null,
           null,
@@ -712,7 +725,7 @@
           null
         ]
       },
-      "/TAMUPROJ/config/initializers/wrap_parameters.rb": {
+      "/tamuRadioClub/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -730,7 +743,19 @@
           null
         ]
       },
-      "/TAMUPROJ/spec/factories/users.rb": {
+      "/tamuRadioClub/spec/factories/maintenance_items.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/tamuRadioClub/spec/factories/users.rb": {
         "lines": [
           1,
           1,
@@ -749,11 +774,14 @@
           null
         ]
       },
-      "/TAMUPROJ/config/routes.rb": {
+      "/tamuRadioClub/config/routes.rb": {
         "lines": [
           1,
           1,
           1,
+          null,
+          1,
+          null,
           null,
           2,
           1,
@@ -768,30 +796,40 @@
           null,
           null,
           1,
+          null,
           1,
           null,
           1,
           1,
           null,
-          null,
           1,
           1,
-          1,
-          null,
-          null,
           1,
           1,
           1,
           null,
           null,
+          null,
+          null,
+          1,
+          null,
           1,
           1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
           null,
           null,
           null
         ]
       },
-      "/TAMUPROJ/app/models/user.rb": {
+      "/tamuRadioClub/app/models/user.rb": {
         "lines": [
           1,
           null,
@@ -806,56 +844,62 @@
           null
         ]
       },
-      "/TAMUPROJ/app/models/application_record.rb": {
+      "/tamuRadioClub/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/TAMUPROJ/app/helpers/admin_helper.rb": {
+      "/tamuRadioClub/app/helpers/admin_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/TAMUPROJ/app/helpers/application_helper.rb": {
+      "/tamuRadioClub/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/TAMUPROJ/app/helpers/comments_helper.rb": {
+      "/tamuRadioClub/app/helpers/comments_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/TAMUPROJ/app/helpers/items_helper.rb": {
+      "/tamuRadioClub/app/helpers/items_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/TAMUPROJ/app/helpers/posts_helper.rb": {
+      "/tamuRadioClub/app/helpers/maintenance_items_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/TAMUPROJ/app/helpers/transactions_helper.rb": {
+      "/tamuRadioClub/app/helpers/posts_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/TAMUPROJ/app/helpers/users_helper.rb": {
+      "/tamuRadioClub/app/helpers/transactions_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/TAMUPROJ/app/controllers/admin_controller.rb": {
+      "/tamuRadioClub/app/helpers/users_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/tamuRadioClub/app/controllers/admin_controller.rb": {
         "lines": [
           1,
           1,
@@ -882,13 +926,13 @@
           null
         ]
       },
-      "/TAMUPROJ/app/controllers/application_controller.rb": {
+      "/tamuRadioClub/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/TAMUPROJ/spec/controllers/item_controller_spec.rb": {
+      "/tamuRadioClub/spec/controllers/item_controller_spec.rb": {
         "lines": [
           1,
           null,
@@ -966,28 +1010,36 @@
           null
         ]
       },
-      "/TAMUPROJ/app/controllers/items_controller.rb": {
+      "/tamuRadioClub/app/controllers/items_controller.rb": {
         "lines": [
           1,
           null,
-          1,
-          2,
-          null,
           null,
           1,
           2,
           null,
           null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
           1,
           2,
           null,
           null,
+          null,
           1,
+          null,
           null,
           null,
           1,
           2,
           2,
+          null,
+          null,
+          null,
           2,
           0,
           0,
@@ -995,23 +1047,28 @@
           2,
           null,
           null,
-          2,
-          2,
-          2,
-          1,
-          1,
           null,
           2,
+          2,
+          2,
+          1,
+          1,
+          null,
+          2,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
           1,
           null,
           null,
           null,
           null,
           1,
-          null,
-          null,
           1,
-          1,
+          null,
           null,
           null,
           1,
@@ -1027,8 +1084,60 @@
           1,
           0,
           null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
           null,
           1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
           null,
           1,
           2,
@@ -1036,7 +1145,7 @@
           null
         ]
       },
-      "/TAMUPROJ/spec/controllers/transactions_controller_spec.rb": {
+      "/tamuRadioClub/spec/controllers/transactions_controller_spec.rb": {
         "lines": [
           null,
           1,
@@ -1119,7 +1228,7 @@
           null
         ]
       },
-      "/TAMUPROJ/app/controllers/transactions_controller.rb": {
+      "/tamuRadioClub/app/controllers/transactions_controller.rb": {
         "lines": [
           1,
           null,
@@ -1140,6 +1249,7 @@
           null,
           1,
           4,
+          4,
           null,
           4,
           0,
@@ -1152,6 +1262,8 @@
           4,
           4,
           2,
+          null,
+          2,
           2,
           null,
           4,
@@ -1161,6 +1273,7 @@
           null,
           null,
           1,
+          null,
           null,
           null,
           1,
@@ -1178,13 +1291,19 @@
           null,
           null,
           1,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
           1,
           4,
           null,
           null
         ]
       },
-      "/TAMUPROJ/spec/helpers/admin_helper_spec.rb": {
+      "/tamuRadioClub/spec/helpers/admin_helper_spec.rb": {
         "lines": [
           1,
           null,
@@ -1203,7 +1322,7 @@
           null
         ]
       },
-      "/TAMUPROJ/spec/helpers/items_helper_spec.rb": {
+      "/tamuRadioClub/spec/helpers/items_helper_spec.rb": {
         "lines": [
           1,
           null,
@@ -1222,7 +1341,7 @@
           null
         ]
       },
-      "/TAMUPROJ/spec/helpers/users_helper_spec.rb": {
+      "/tamuRadioClub/spec/helpers/maintenance_items_helper_spec.rb": {
         "lines": [
           1,
           null,
@@ -1241,7 +1360,62 @@
           null
         ]
       },
-      "/TAMUPROJ/spec/models/item_spec.rb": {
+      "/tamuRadioClub/spec/helpers/users_helper_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/tamuRadioClub/spec/mailers/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/tamuRadioClub/app/mailers/user_mailer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/tamuRadioClub/app/mailers/application_mailer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/tamuRadioClub/spec/models/item_spec.rb": {
         "lines": [
           1,
           null,
@@ -1277,17 +1451,45 @@
           null
         ]
       },
-      "/TAMUPROJ/app/models/item.rb": {
+      "/tamuRadioClub/app/models/item.rb": {
         "lines": [
           1,
+          null,
           1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
           null,
           null,
           1,
           null
         ]
       },
-      "/TAMUPROJ/spec/models/user_spec.rb": {
+      "/tamuRadioClub/spec/models/maintenance_item_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/tamuRadioClub/app/models/maintenance_item.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/tamuRadioClub/spec/models/user_spec.rb": {
         "lines": [
           1,
           null,
@@ -1343,7 +1545,7 @@
           null
         ]
       },
-      "/TAMUPROJ/spec/requests/admin_spec.rb": {
+      "/tamuRadioClub/spec/requests/admin_spec.rb": {
         "lines": [
           1,
           null,
@@ -1364,12 +1566,12 @@
           null
         ]
       },
-      "/TAMUPROJ/spec/requests/items_spec.rb": {
+      "/tamuRadioClub/spec/requests/items_spec.rb": {
         "lines": [
           1,
           null,
           1,
-          4,
+          3,
           null,
           1,
           1,
@@ -1392,6 +1594,167 @@
           null,
           null,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/tamuRadioClub/spec/requests/maintenance_items_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          10,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/tamuRadioClub/spec/requests/users_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
           1,
           1,
           1,
@@ -1409,38 +1772,7 @@
           null
         ]
       },
-      "/TAMUPROJ/spec/requests/users_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/TAMUPROJ/spec/views/admin/index.html.erb_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
-      "/TAMUPROJ/spec/views/items/delete.html.erb_spec.rb": {
+      "/tamuRadioClub/spec/routing/maintenance_items_routing_spec.rb": {
         "lines": [
           1,
           null,
@@ -1453,10 +1785,112 @@
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
-      "/TAMUPROJ/spec/views/items/edit.html.erb_spec.rb": {
+      "/tamuRadioClub/app/controllers/maintenance_items_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/tamuRadioClub/spec/views/admin/index.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1465,7 +1899,23 @@
           null
         ]
       },
-      "/TAMUPROJ/spec/views/items/index.html.erb_spec.rb": {
+      "/tamuRadioClub/spec/views/items/delete.html.erb_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/tamuRadioClub/spec/views/items/edit.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1474,7 +1924,7 @@
           null
         ]
       },
-      "/TAMUPROJ/spec/views/items/new.html.erb_spec.rb": {
+      "/tamuRadioClub/spec/views/items/index.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1483,7 +1933,7 @@
           null
         ]
       },
-      "/TAMUPROJ/spec/views/items/show.html.erb_spec.rb": {
+      "/tamuRadioClub/spec/views/items/new.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1492,7 +1942,7 @@
           null
         ]
       },
-      "/TAMUPROJ/spec/views/users/edit.html.erb_spec.rb": {
+      "/tamuRadioClub/spec/views/items/show.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1501,7 +1951,130 @@
           null
         ]
       },
-      "/TAMUPROJ/spec/views/users/index.html.erb_spec.rb": {
+      "/tamuRadioClub/spec/views/maintenance_items/edit.html.erb_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/tamuRadioClub/spec/views/maintenance_items/index.html.erb_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/tamuRadioClub/spec/views/maintenance_items/new.html.erb_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/tamuRadioClub/spec/views/maintenance_items/show.html.erb_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/tamuRadioClub/spec/views/users/edit.html.erb_spec.rb": {
         "lines": [
           1,
           null,
@@ -1510,14 +2083,24 @@
           null
         ]
       },
-      "/TAMUPROJ/app/models/transaction.rb": {
+      "/tamuRadioClub/spec/views/users/index.html.erb_spec.rb": {
         "lines": [
+          1,
+          null,
           1,
           1,
           null
         ]
       },
-      "/TAMUPROJ/app/controllers/users_controller.rb": {
+      "/tamuRadioClub/app/models/transaction.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/tamuRadioClub/app/controllers/users_controller.rb": {
         "lines": [
           1,
           1,
@@ -1530,6 +2113,6 @@
         ]
       }
     },
-    "timestamp": 1696991529
+    "timestamp": 1697506251
   }
 }
