@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   get 'users/index'
   get 'users/edit'
+
+  resources :maintenance_items
+
   # if user is not an admin, going to /admins will give 404 error
   authenticated :user, -> (user) { user.admin? } do
     get 'admin', to: 'admin#index'
@@ -16,11 +19,10 @@ Rails.application.routes.draw do
 
   root to: "items#index"
 
-  #get '/items/export', to:'items#export' 
-  #post 'items/import', to: 'items#import', as: 'import_items'
-
   put 'items/:id/checkout', to: 'items#checkout', as: 'checkout_item'
-  #post 'button_action/:id', to: 'items#button_action'
+  
+  get '/items/export', to:'items#export' 
+  post 'items/import', to: 'items#import', as: 'import_items'
 
   resources :items do
     member do
