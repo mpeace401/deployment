@@ -17,7 +17,8 @@ class TransactionsController < ApplicationController
   
     def create
       @transaction = Transaction.new(transaction_params)
-      #@transaction.available = true
+      @transaction.approved = false
+
       if Transaction.count != 0
         count = Transaction.last.id + 1
         @transaction.id = count
@@ -41,6 +42,7 @@ class TransactionsController < ApplicationController
   
     def update
     end
+
   
     def delete
       @transaction = Transaction.find(params[:id])
@@ -54,6 +56,12 @@ class TransactionsController < ApplicationController
         format.html { redirect_to transactions_url, notice: "Transaction was successfully removed." }
         format.json { head :no_content }
       end
+    end
+
+    def approve
+      @transaction = Transaction.find(params[:id])
+    
+      redirect_to transactions_path, notice: "Transaction was approved."
     end
   
     private

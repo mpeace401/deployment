@@ -49,6 +49,7 @@ class ItemsController < ApplicationController
   # Update an item's details
   def update
   end
+  
 
   # Confirm deletion of an item
   def delete
@@ -63,6 +64,22 @@ class ItemsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to items_url, notice: "Item was successfully removed." }
       format.json { head :no_content }
+    end
+  end
+
+  def checkout
+    @item = Item.find(params[:id])
+  
+    if @item.available
+      # Mark the item as unavailable
+      @item.update_attribute(:available, false)
+  
+      # Create a new Transaction entry with the item's serial_number
+      Transaction.create(email: current_user.email, serial_number: @item.serial_number)
+      
+      redirect_to items_path, notice: "Item checked out and transaction created."
+    else
+      redirect_to items_path, alert: "Item is already checked out."
     end
   end
 
@@ -109,6 +126,6 @@ class ItemsController < ApplicationController
 
     # Strong parameters for item to prevent mass-assignment vulnerabilities
     def item_params
-      params.require(:item).permit(:name, :serial_number, :description, :image)
+      params.require(:item).permit(:name, :serial_number, :description, :image, :available)
     end
 end
