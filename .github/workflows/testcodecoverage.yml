@@ -31,27 +31,22 @@ jobs:
 
     steps:
     - name: Clear GitHub Actions cache
-      run: |
-        npm cache clean --force
+      run: npm cache clean --force
+
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
       with:
-        node-version: '16.20.2'  # Set the Node.js version you want here!
+        node-version: '16.20.2'
     - uses: ruby/setup-ruby@v1
       with:
-#       ruby-version: ${{ env.RUBY_VERSION }}
         ruby-version: 3.1.2
         bundler-cache: true
-#    - uses: borales/actions-yarn@v3.0.0
-#      with:
-#        cmd: install
+
     - name: Install PostgreSQL client
       run: |
         sudo apt-get -yqq install libpq-dev
         gem install bundler
         bundle install --jobs 4 --retry 3
-
-
 
     - name: Setup DB
       env:
@@ -70,37 +65,34 @@ jobs:
         PGUSER: postgres
         PGPASSWORD: postgres
         RAILS_ENV: test
-      run: |
-        bundler exec rspec
-#        npx update-browserslist-db@latest
-#        bundle exec rake webpacker:compile
+      run: bundle exec rspec
 
+  rubocop-test:
+    name: Rubocop
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1.2
+          bundler-cache: true
+      - name: Check code with Rubocop
+        run: |
+          gem install rubocop
+          rubocop
 
-
-  # rubocop-test:
-  #   name: Rubocop
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v1
-  #     - uses: ruby/setup-ruby@v1
-  #       with:
-  #         #ruby-version: ${{ env.RUBY_VERSION }}
-  #         ruby-version: 3.1.2
-  #         bundler-cache: true
-  #     - name: Install Rubocop & Check code
-  #       run: |
-  #         gem install rubocop
-  #         rubocop
-  #
-  # simplecov-test:
-  #   name: SimpleCov
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v1
-  #     - uses: ruby/setup-ruby@v1
-  #       with:
-  #         ruby-version: 3.1.2
-  #         bundler-cache: true
-  #     - name: Download all workflow run artifacts
-  #       uses: actions/download-artifact@v2
-  #       if: always()
+  security-checks:
+    name: Security Checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1.2
+          bundler-cache: true
+      - name: Run security and formatting checks
+        run: |
+          bundle exec brakeman -z
+          gem install bundle-audit
+          bundle-audit update
+          bundle-audit
