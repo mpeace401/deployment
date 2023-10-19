@@ -88,6 +88,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
   gem 'simplecov', :require => false
+  gem 'webmock'
+  gem 'omniauth-google-oauth2'
 end
 
 gem 'yaml_db'
