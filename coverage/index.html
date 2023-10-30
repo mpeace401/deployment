@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-10-19T15:58:47+00:00">2023-10-19T15:58:47+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-10-30T17:17:17+00:00">2023-10-30T17:17:17+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -359,7 +359,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#e7a7a167c4e10f4d55836575fa93a81341016965" class="src_link" title="spec/models/user_spec.rb">spec/models/user_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">86</td>
+            <td class="cell--number">94</td>
             <td class="cell--number">43</td>
             <td class="cell--number">43</td>
             <td class="cell--number">0</td>
@@ -8609,13 +8609,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="40">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="40">
+            
             
 
             
 
-            <code class="ruby">    it &quot;is valid with valid attributes&quot; do</code>
+            <code class="ruby">    # Sunny Test</code>
           </li>
         </div>
       
@@ -8626,7 +8626,7 @@
 
             
 
-            <code class="ruby">      user = User.new(fname: &quot;John&quot;, lname: &quot;Doe&quot;, email: &quot;test@gmail.com&quot;, role: &quot;Admin&quot;, password: &#39;123456&#39;)</code>
+            <code class="ruby">    it &quot;is valid with valid attributes&quot; do</code>
           </li>
         </div>
       
@@ -8637,18 +8637,18 @@
 
             
 
-            <code class="ruby">      expect(user).to be_valid</code>
+            <code class="ruby">      user = User.new(fname: &quot;John&quot;, lname: &quot;Doe&quot;, email: &quot;test@gmail.com&quot;, role: &quot;Admin&quot;, password: &#39;123456&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="43">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">      expect(user).to be_valid</code>
           </li>
         </div>
       
@@ -8659,29 +8659,29 @@
 
             
 
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="45">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="45">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="46">
+            
             
 
             
 
-            <code class="ruby">    it &quot;is not valid without a first_name&quot; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="46">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      user = User.new(fname: nil, lname: &quot;Doe&quot;, email: &quot;test@gmail.com&quot;, role: &quot;Admin&quot;, password: &#39;123456&#39;)</code>
+            <code class="ruby">    # Rainy Test</code>
           </li>
         </div>
       
@@ -8692,12 +8692,34 @@
 
             
 
+            <code class="ruby">    it &quot;is not valid without a first_name&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="48">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      user = User.new(fname: nil, lname: &quot;Doe&quot;, email: &quot;test@gmail.com&quot;, role: &quot;Admin&quot;, password: &#39;123456&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="49">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">      expect(user).not_to be_valid</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
+          <li class="never" data-hits="" data-linenumber="50">
             
             
 
@@ -8708,7 +8730,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="49">
+          <li class="never" data-hits="" data-linenumber="51">
             
             
 
@@ -8719,7 +8741,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="50">
+          <li class="never" data-hits="" data-linenumber="52">
+            
+            
+
+            
+
+            <code class="ruby">    # Rainy Test</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="53">
             <span class="hits">1</span>
             
 
@@ -8730,7 +8763,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="51">
+          <li class="covered" data-hits="1" data-linenumber="54">
             <span class="hits">1</span>
             
 
@@ -8741,7 +8774,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="52">
+          <li class="covered" data-hits="1" data-linenumber="55">
             <span class="hits">1</span>
             
 
@@ -8752,7 +8785,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="53">
+          <li class="never" data-hits="" data-linenumber="56">
             
             
 
@@ -8763,46 +8796,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="54">
+          <li class="never" data-hits="" data-linenumber="57">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="55">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    it &quot;is not valid without an email&quot; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="56">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      user = User.new(fname: &quot;John&quot;, lname: &quot;Doe&quot;, email: nil, role: &quot;Admin&quot;, password: &#39;123456&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="57">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      expect(user).not_to be_valid</code>
           </li>
         </div>
       
@@ -8813,18 +8813,18 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">    # Rainy Test</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="59">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="59">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    it &quot;is not valid without an email&quot; do</code>
           </li>
         </div>
       
@@ -8835,7 +8835,7 @@
 
             
 
-            <code class="ruby">    it &quot;is not valid without a role&quot; do</code>
+            <code class="ruby">      user = User.new(fname: &quot;John&quot;, lname: &quot;Doe&quot;, email: nil, role: &quot;Admin&quot;, password: &#39;123456&#39;)</code>
           </li>
         </div>
       
@@ -8846,18 +8846,18 @@
 
             
 
-            <code class="ruby">      user = User.new(fname: &quot;John&quot;, lname: &quot;Doe&quot;, email: &quot;test@gmail.com&quot;, role: nil, password: &#39;123456&#39;)</code>
+            <code class="ruby">      expect(user).not_to be_valid</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="62">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="62">
+            
             
 
             
 
-            <code class="ruby">      expect(user).not_to be_valid</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -8868,7 +8868,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -8879,7 +8879,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Rainy Test</code>
           </li>
         </div>
       
@@ -8890,7 +8890,7 @@
 
             
 
-            <code class="ruby">    it &quot;is not valid with a duplicate email&quot; do</code>
+            <code class="ruby">    it &quot;is not valid without a role&quot; do</code>
           </li>
         </div>
       
@@ -8901,7 +8901,7 @@
 
             
 
-            <code class="ruby">      User.create!(fname: &quot;John&quot;, lname: &quot;Doe&quot;, email: &quot;test@gmail.com&quot;, role: &quot;Admin&quot;, password: &#39;123456&#39;)</code>
+            <code class="ruby">      user = User.new(fname: &quot;John&quot;, lname: &quot;Doe&quot;, email: &quot;test@gmail.com&quot;, role: nil, password: &#39;123456&#39;)</code>
           </li>
         </div>
       
@@ -8912,18 +8912,18 @@
 
             
 
-            <code class="ruby">      user = User.new(fname: &quot;Jane&quot;, lname: &quot;Doe&quot;, email: &quot;test@gmail.com&quot;, role: &quot;Member&quot;, password: &#39;123456&#39;)</code>
+            <code class="ruby">      expect(user).not_to be_valid</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="68">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="68">
+            
             
 
             
 
-            <code class="ruby">      expect(user).not_to be_valid</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -8934,7 +8934,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -8945,7 +8945,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # Rainy Test</code>
           </li>
         </div>
       
@@ -8956,7 +8956,7 @@
 
             
 
-            <code class="ruby">    it &quot;is not valid without a password&quot; do</code>
+            <code class="ruby">    it &quot;is not valid with a duplicate email&quot; do</code>
           </li>
         </div>
       
@@ -8967,7 +8967,7 @@
 
             
 
-            <code class="ruby">      user = User.new(fname: &quot;John&quot;, lname: &quot;Doe&quot;, email: &quot;test@gmail.com&quot;, role: &quot;Admin&quot;, password: nil)</code>
+            <code class="ruby">      User.create!(fname: &quot;John&quot;, lname: &quot;Doe&quot;, email: &quot;test@gmail.com&quot;, role: &quot;Admin&quot;, password: &#39;123456&#39;)</code>
           </li>
         </div>
       
@@ -8978,18 +8978,18 @@
 
             
 
-            <code class="ruby">      expect(user).not_to be_valid</code>
+            <code class="ruby">      user = User.new(fname: &quot;Jane&quot;, lname: &quot;Doe&quot;, email: &quot;test@gmail.com&quot;, role: &quot;Member&quot;, password: &#39;123456&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="74">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="74">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">      expect(user).not_to be_valid</code>
           </li>
         </div>
       
@@ -9000,29 +9000,29 @@
 
             
 
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="76">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="76">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="77">
+            
             
 
             
 
-            <code class="ruby">    it &quot;is not valid with a short password&quot; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="77">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      user = User.new(fname: &quot;John&quot;, lname: &quot;Doe&quot;, email: &quot;test@gmail.com&quot;, role: &quot;Admin&quot;, password: &#39;12345&#39;)</code>
+            <code class="ruby">    # Rainy Test</code>
           </li>
         </div>
       
@@ -9033,29 +9033,29 @@
 
             
 
+            <code class="ruby">    it &quot;is not valid without a password&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="79">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      user = User.new(fname: &quot;John&quot;, lname: &quot;Doe&quot;, email: &quot;test@gmail.com&quot;, role: &quot;Admin&quot;, password: nil)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="80">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">      expect(user).not_to be_valid</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="79">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="80">
-            
-            
-
-            
-
-            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9066,7 +9066,7 @@
 
             
 
-            <code class="ruby">    # it &quot;is only valid with role as &#39;Admin&#39; or &#39;Member&#39;&quot; do</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -9077,7 +9077,7 @@
 
             
 
-            <code class="ruby">    #   user = User.new(fname: &quot;John&quot;, lname: &quot;Doe&quot;, email: &quot;test@gmail.com&quot;, role: &quot;InvalidRole&quot;, password: &#39;123456&#39;)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -9088,12 +9088,100 @@
 
             
 
+            <code class="ruby">    # Rainy Test</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="84">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &quot;is not valid with a short password&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="85">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      user = User.new(fname: &quot;John&quot;, lname: &quot;Doe&quot;, email: &quot;test@gmail.com&quot;, role: &quot;Admin&quot;, password: &#39;12345&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="86">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(user).not_to be_valid</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="87">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="88">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="89">
+            
+            
+
+            
+
+            <code class="ruby">    # it &quot;is only valid with role as &#39;Admin&#39; or &#39;Member&#39;&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="90">
+            
+            
+
+            
+
+            <code class="ruby">    #   user = User.new(fname: &quot;John&quot;, lname: &quot;Doe&quot;, email: &quot;test@gmail.com&quot;, role: &quot;InvalidRole&quot;, password: &#39;123456&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="91">
+            
+            
+
+            
+
             <code class="ruby">    #   expect(user).not_to be_valid</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="84">
+          <li class="never" data-hits="" data-linenumber="92">
             
             
 
@@ -9104,7 +9192,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="85">
+          <li class="never" data-hits="" data-linenumber="93">
             
             
 
@@ -9115,7 +9203,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="86">
+          <li class="never" data-hits="" data-linenumber="94">
             
             
 
