@@ -1,5 +1,14 @@
 <div class="container">
   <h1>Inventory</h1>
+  <%# Testing google oauth %>
+  <div class="alert alert-info" role="alert">
+  <p>You're logged in! Welcome to the Item Dashboard!</p>
+   <%= button_to "Sign Out",
+        destroy_user_session_path,
+        method: :delete,
+        class: "btn btn-warning" %>
+</div>
+
   <%= link_to "Add Item", new_item_path %>
   <%= link_to "View Member Items", member_items_path %>
   <div id="items">
