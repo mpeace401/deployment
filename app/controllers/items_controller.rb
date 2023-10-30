@@ -49,6 +49,7 @@ class ItemsController < ApplicationController
   # Update an item's details
   def update
   end
+  
 
   # Confirm deletion of an item
   def delete
@@ -66,15 +67,65 @@ class ItemsController < ApplicationController
     end
   end
 
+  def checkout
+    @item = Item.find(params[:id])
+  
+    if @item.available
+      # Mark the item as unavailable
+      @item.update_attribute(:available, false)
+  
+      # Create a new Transaction entry with the item's serial_number
+      Transaction.create(email: current_user.email, serial_number: @item.serial_number)
+      
+      redirect_to items_path, notice: "Item checked out and transaction created."
+    else
+      redirect_to items_path, alert: "Item is already checked out."
+    end
+  end
+
   # Display all items that are available
   def member_items
     @items = Item.where(available: true)
   end
 
+  def export
+    @items = Item.all
+
+    # respond_to do |format|
+    #   format.csv {send_data @items.to_csv, filename: "items-#{Date.today}.csv"}
+    # end
+    send_data @items.to_csv, filename: "items-#{Date.today}.csv"
+  end
+
+  def import
+    if params[:file].present?
+      csv_text = File.read(params[:file].path)
+      csv = CSV.parse(csv_text, headers: true)
+      csv.each do |row|
+        item_hash = row.to_hash
+        item_hash["available"] = case item_hash["available"].downcase.strip
+                                 when 'true', 't', '1'
+                                   true
+                                 else 
+                                   false # Default value when it's not explicitly true.
+                                 end
+        
+        item = Item.find_or_initialize_by(id: item_hash["id"])
+        item.update!(item_hash)
+      end
+  
+      redirect_to items_path, notice: "Items imported successfully!"
+    else
+      redirect_to items_path, alert: "Please upload a CSV file."
+    end
+  rescue ActiveRecord::RecordInvalid => e
+    redirect_to items_path, alert: "There was an issue with importing items. Error: #{e.message}"
+  end   
+  
   private
 
     # Strong parameters for item to prevent mass-assignment vulnerabilities
     def item_params
-      params.require(:item).permit(:name, :serial_number, :description, :image)
+      params.require(:item).permit(:name, :serial_number, :description, :image, :available)
     end
 end
