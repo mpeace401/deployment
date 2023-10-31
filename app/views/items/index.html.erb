@@ -2,34 +2,28 @@
   <h1>Inventory</h1>
   <%# Testing google oauth %>
   <div class="alert alert-info" role="alert">
-  <p>You're logged in! Welcome to the Item Dashboard!</p>
-   <%= button_to "Sign Out",
-        destroy_user_session_path,
-        method: :delete,
-        class: "btn btn-warning" %>
-</div>
+    <p>You're logged in! Welcome to the Item Dashboard!</p>
+    <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-warning" %>
+  </div>
 
-  <%= link_to "Add Item", new_item_path %>
-  <%= link_to "View Member Items", member_items_path %>
-  <div id="items">
+  <div class="mb-3">
+    <%= link_to "Add Item", new_item_path, class: "btn btn-primary" %>
+    <%= link_to "View Member Items", member_items_path, class: "btn btn-secondary" %>
+    <%= link_to 'Export Items', items_export_path, class: "btn btn-info" %>
+  </div>
+
+  <div class="row">
     <% @items.each do |item| %>
-      <%= render item %>
-      <p>
-        <%= link_to "Show", item %>
-        <%= link_to "Edit", edit_item_path(item) %>
-        <%= link_to "Delete", delete_item_path(item) %>
-        <%= link_to 'Checkout', checkout_item_path(item), method: :put, class: "button" %>
-
-        <!--#<%= button_to "Checkout", "button_action", method: :post, class: "btn" %>-->
-      </p>
+      <div class="col-md-4 mb-4">
+        <%= render item %>
+      </div>
     <% end %>
   </div>
 
-  <%= link_to "Add Item", new_item_path %>
-  <%= link_to "View Member Items", member_items_path %>
-  <%= link_to 'Export Items', items_export_path, class: "button" %>
-  <%= form_tag import_items_path, multipart: true do %>
-    <%= file_field_tag :file %>
-    <%= submit_tag "Import" %>
+  <%= form_tag import_items_path, multipart: true, class: "mt-3" do %>
+    <div class="mb-3">
+      <%= file_field_tag :file, class: "form-control" %>
+    </div>
+    <%= submit_tag "Import", class: "btn btn-success" %>
   <% end %>
 </div>
