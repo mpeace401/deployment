@@ -15,4 +15,7 @@ class Item < ApplicationRecord
     end
     # change to has_many_atached if you want to attach multiple images
     has_one_attached :image, :dependent => :destroy
+
+    # for search functionality
+    scope :search, -> (term) { where('name ILIKE ?', "%#{term}%") if term.present? }
   end

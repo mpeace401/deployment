@@ -68,7 +68,8 @@ class ItemsController < ApplicationController
 
   # Display all items that are available
   def member_items
-    @items = Item.where(available: true)
+    # @items = Item.where(available: true)
+    @items = Item.search(params[:search]).where(available: true)
   end
 
   def export
