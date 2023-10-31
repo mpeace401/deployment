@@ -19,12 +19,12 @@
         <%= link_to "Edit", edit_item_path(item) %>
         <%= link_to "Delete", delete_item_path(item) %>
         <%= link_to 'Checkout', checkout_item_path(item), method: :put, class: "button" %>
-        
+
         <!--#<%= button_to "Checkout", "button_action", method: :post, class: "btn" %>-->
       </p>
     <% end %>
   </div>
-  
+
   <%= link_to "Add Item", new_item_path %>
   <%= link_to "View Member Items", member_items_path %>
   <%= link_to 'Export Items', items_export_path, class: "button" %>
