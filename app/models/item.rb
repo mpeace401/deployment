@@ -19,5 +19,6 @@ class Item < ApplicationRecord
     has_one_attached :image, :dependent => :destroy
 
     # for search functionality
+    #name ILIKE --> allows the SQL to match without being case sensitive
     scope :search, -> (term) { where('name ILIKE ?', "%#{term}%") if term.present? }
   end
