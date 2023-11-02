@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 
   # Display all items
   def index
-    @items = Item.all
+    @items = Item.search(params[:search])
   end
 
   # Show details of a specific item
