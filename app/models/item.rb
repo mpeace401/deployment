@@ -1,7 +1,9 @@
 require 'csv'
 
 class Item < ApplicationRecord
-    validates :name, :description, :serial_number, :available, presence: true
+    validates :name, :description, :serial_number, presence: true
+    #available column can how hold true and false values
+    validates :available, inclusion: { in: [true, false] }
   
     def self.to_csv
       attributes = %w{id name description serial_number available} # Specify the fields you want to export
