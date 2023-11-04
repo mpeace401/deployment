@@ -17,6 +17,7 @@ class ItemsController < ApplicationController
 
   # Form for editing an item
   def edit
+    @item = Item.find(params[:id])
   end
 
   # Create a new item record
@@ -49,7 +50,7 @@ class ItemsController < ApplicationController
   # Update an item's details
   def update
   end
-  
+
 
   # Confirm deletion of an item
   def delete
@@ -69,14 +70,14 @@ class ItemsController < ApplicationController
 
   def checkout
     @item = Item.find(params[:id])
-  
+
     if @item.available
       # Mark the item as unavailable
       @item.update_attribute(:available, false)
-  
+
       # Create a new Transaction entry with the item's serial_number
       Transaction.create(email: current_user.email, serial_number: @item.serial_number)
-      
+
       redirect_to items_path, notice: "Item checked out and transaction created."
     else
       redirect_to items_path, alert: "Item is already checked out."
@@ -106,22 +107,22 @@ class ItemsController < ApplicationController
         item_hash["available"] = case item_hash["available"].downcase.strip
                                  when 'true', 't', '1'
                                    true
-                                 else 
+                                 else
                                    false # Default value when it's not explicitly true.
                                  end
-        
+
         item = Item.find_or_initialize_by(id: item_hash["id"])
         item.update!(item_hash)
       end
-  
+
       redirect_to items_path, notice: "Items imported successfully!"
     else
       redirect_to items_path, alert: "Please upload a CSV file."
     end
   rescue ActiveRecord::RecordInvalid => e
     redirect_to items_path, alert: "There was an issue with importing items. Error: #{e.message}"
-  end   
-  
+  end
+
   private
 
     # Strong parameters for item to prevent mass-assignment vulnerabilities
