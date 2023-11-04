@@ -4,11 +4,63 @@ RSpec.describe ItemsController, type: :controller do
   render_views
 
   describe "GET #index" do
+
     it "assigns all items to @items and renders the index template" do
       item = Item.create(name: "Test Item", serial_number: "12345", description: "Test Description", available: true)
       get :index
       expect(assigns(:items)).to match_array(Item.all)
       expect(response).to render_template(:index)
+    end
+
+    #Testing serach functionality on admin inventory page
+    #sunny day case
+    context "with search term" do
+      it "returns items that match the search term" do
+        item1 = Item.create!(name: "Test Item 1", serial_number: "12345", description: "Test Description", available: true)
+        item2 = Item.create!(name: "Test Item 2", serial_number: "12345", description: "Test Description", available: true)
+        get :index, params: { search: "Test Item 1"}
+        expect(response.body).to include("Test Item 1")
+        expect(response.body).not_to include("Test Item 2")
+      end
+    end
+
+    #rainy day case
+    context "without search term" do
+      it "returns all items when search term is empty" do
+        item1 = Item.create!(name: "Test Item 1", serial_number: "12345", description: "Test Description", available: true)
+        item2 = Item.create!(name: "Test Item 2", serial_number: "12345", description: "Test Description", available: true)
+        get :index, params: { search: "" }
+        expect(response.body).to include("Test Item 1")
+        expect(response.body).to include("Test Item 2")
+      end
+    end
+  end
+  
+  #Testing search functionality on member inventory page
+  describe "Get #member_items" do
+
+    #sunny day case
+    context "with search term" do
+      it "returns available items that match the search term" do
+        item1 = Item.create!(name: "Test Item 1", serial_number: "12345", description: "Test Description", available: true)
+        item2 = Item.create!(name: "Unavailable Item", serial_number: "12345", description: "Test Description", available: false)
+        get :member_items, params: { search: "Test Item 1" }
+        expect(response.body).to include("Test Item 1")
+        expect(response.body).not_to include("Unavailable Item")
+      end
+    end
+
+    #rainy day case
+    context "without search term" do
+      it "returns all available items when search term is empty" do
+        item1 = Item.create!(name: "Testing Item 1", serial_number: "12345", description: "Test Description", available: true)
+        item2 = Item.create!(name: "Testing Item 2", serial_number: "12345", description: "Test Description", available: true)
+        itme3 = Item.create!(name: "Unavailable Item", serial_number: "12345", description: "Test Description", available: false)
+        get :member_items, params: { search: "" }
+        expect(response.body).to include("Testing Item 1")
+        expect(response.body).to include("Testing Item 2")
+        expect(response.body).not_to include("Unavailable Item")
+      end
     end
   end
 
@@ -136,5 +188,5 @@ RSpec.describe ItemsController, type: :controller do
   end
 
 
-  #  write tests for edit, member_items actions
+  #  write tests for edit
 end
