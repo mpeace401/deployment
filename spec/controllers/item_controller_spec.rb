@@ -70,5 +70,71 @@ RSpec.describe ItemsController, type: :controller do
     end
   end
   
+  #tests for import / export csv function
+
+  #testing export function
+  describe "GET #export" do
+    let!(:item) {Item.create(name: 'Testing Item', description: 'Testing Description', serial_number: '123456', available: true)}
+
+    it "export items" do
+      get :export
+
+      csv = CSV.parse(response.body, headers: true)
+      exported_item = csv.first
+
+      expect(response.status).to eq(200)
+      expect(exported_item['name']).to eq(item.name)
+      expect(exported_item['description']).to eq(item.description)
+      expect(exported_item['serial_number']).to eq(item.serial_number)
+      expect(exported_item['available']).to eq(item.available.to_s)
+    end
+  end
+
+  #testing import function
+  describe "POST #import" do
+    let (:csv_file) { fixture_file_upload('items.csv', 'text/csv') }
+
+    it "import items" do
+      #delete all items in the database
+      Item.transaction do
+        Item.delete_all
+
+        expect { post :import, params: {file: csv_file } }.to change(Item, :count).by(1)
+
+        expect(response).to redirect_to(items_path)
+        expect(flash[:notice]).to eq("Items imported successfully!")
+        # expect { post :import, params: {file: csv_file } }.to change(Item, :count).by(1)
+        expect(Item.first.name).to eq("Testing Item")
+        expect(Item.first.description).to eq("Testing Description")
+        expect(Item.first.serial_number).to eq("123456")
+        expect(Item.first.available).to eq(true)
+        #revert the deletion and addition of testing file
+        raise ActiveRecord::Rollback
+      end
+    end
+
+    context "when csv file is missing" do
+      it "gives an error" do
+        post :import
+
+        expect(response).to redirect_to(items_path)
+        expect(flash[:alert]).to eq("Please upload a CSV file.")
+      end
+    end
+
+    context "when csv file is missing columns" do
+      let(:csv_file) { fixture_file_upload("invalid_items.csv", "test/csv") }
+
+      it "fails to import items and gives an error" do
+        post :import, params: { file: csv_file}
+
+        expect(response).to redirect_to(items_path)
+        expect(flash[:alert]).to start_with("There was an issue with importing items.")
+        expect { post :import, params: { file: csv_file } }.not_to change(Item, :count)
+      end
+    end
+  end
+
+
   #  write tests for edit, member_items actions
 end

@@ -99,7 +99,7 @@ class ItemsController < ApplicationController
                                    false # Default value when it's not explicitly true.
                                  end
         
-        item = Item.find_or_initialize_by(id: item_hash["id"])
+        item = Item.find_or_create_by(id: item_hash["id"])
         item.update!(item_hash)
       end
   
