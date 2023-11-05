@@ -2,7 +2,10 @@ class ItemsController < ApplicationController
 
   # Display all items
   def index
-    @items = Item.all
+    #Search Functionality
+    #If search is empty, return all items
+    #Else, return items that contain the search string
+    @items = Item.search(params[:search])
   end
 
   # Show details of a specific item
@@ -86,7 +89,10 @@ class ItemsController < ApplicationController
 
   # Display all items that are available
   def member_items
-    @items = Item.where(available: true)
+    #Search Functionality
+    #If search is empty, return all items with available set to True (This is the case for member inventory)
+    #Otherwise, only return items that contains the search string and is available
+    @items = Item.search(params[:search]).where(available: true)
   end
 
   def export
@@ -110,8 +116,8 @@ class ItemsController < ApplicationController
                                  else
                                    false # Default value when it's not explicitly true.
                                  end
-
-        item = Item.find_or_initialize_by(id: item_hash["id"])
+        
+        item = Item.find_or_create_by(id: item_hash["id"])
         item.update!(item_hash)
       end
 

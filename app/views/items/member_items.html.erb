@@ -2,11 +2,16 @@
 <div class="container">
   <h1>Member - Inventory</h1>
 
+  <%= form_tag(member_items_path, method: :get) do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", name: nil %>
+  <% end %>
+
   <% @items.each_with_index do |item, index| %>
     <p><%= index + 1 %>.
       <%= item.name %></p>
   <% end %>
 
-  <%= link_to "View inventory", items_path %>
+  <%= link_to "View full inventory", member_items_path %>
 
 </div>
