@@ -14,8 +14,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        <%# <li class="nav-item">
           <%= link_to "Home", root_path, class: "nav-link" %>
+        <%# </li> %>
+        <li class="nav-item">
+          <%= link_to "Admin Inventory", admin_items_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Member Inventory", member_items_path, class: "nav-link" %>
@@ -31,10 +34,10 @@
             <%= link_to "Admin Dashboard", admin_path, class: "nav-link" %>
           </li>
         <% end %>
-      </ul>  
-      <ul class="navbar-nav"> 
+      </ul>
+      <ul class="navbar-nav">
         <%= render 'users/session_manager' %>
-      </ul> 
+      </ul>
     </div>
   </div>
 </nav>
