@@ -6,10 +6,15 @@
     <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-warning text-white" %>
   </div>
 
-  <%= form_tag(member_items_path, method: :get) do %>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", name: nil %>
-  <% end %>
+  <div class="mb-4">
+    <%= form_tag(member_items_path, method: :get, class: "form-inline justify-content-center") do %>
+      <div class="input-group mb-3">
+        <%= text_field_tag :search, params[:search], placeholder: "Enter item name", class: "form-control mr-2", aria: { label: 'Search' } %>
+        <%= submit_tag "Search", class: "btn btn-outline-secondary", style: "margin-left: 8px;" %>
+      </div>
+    <% end %>
+  </div>
+
 
   <div class="row">
     <% @items.each do |item| %>
