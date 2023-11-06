@@ -21,11 +21,32 @@
     <%= link_to 'Export Items', items_export_path, class: "btn btn-info text-white" %>
   <% end %>
 
-  <div class="row">
-    <% @items.each do |item| %>
-      <div class="col-md-4 mb-4">
-        <%= render item %>
-      </div>
-    <% end %>
-  </div>
+ <table id="inventory-table" class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <% if current_user.admin? %>
+          <th>Serial Number</th>
+          <th>Internal ID</th>
+          <th>Available?</th>
+        <% end %>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @items.each do |item| %>
+        <tr id="<%= dom_id(item) %>">
+          <td><%= item.name %></td>
+            <td><%= item.serial_number %></td>
+            <td><%= item.id %></td>
+            <td><%= item.available ? 'Yes' : 'No' %></td>
+          <td>
+            <%= link_to "Edit", edit_item_path(item), class: "btn btn-info btn-sm text-white" %>
+            <%= link_to "Delete", item_path(item), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm text-white" %>
+            <%= link_to 'Checkout', checkout_item_path(item), method: :put, class: "btn btn-success btn-sm text-white" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
