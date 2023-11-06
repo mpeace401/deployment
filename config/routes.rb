@@ -46,7 +46,4 @@ Rails.application.routes.draw do
 
   get 'member-items', to: 'items#member_items'
   get 'transactions', to: 'transactions#index'
-
-  #post 'button_action2/:id', to: 'transactions#button_action2'
-  #get 'button_action', to: 'items#index'
 end
