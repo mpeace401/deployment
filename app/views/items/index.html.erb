@@ -7,7 +7,13 @@
     <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-warning text-white" %>
   </div>
 
+  <!-- Search functionality --> 
 
+  <%= form_with url: items_path, method: :get, local: true do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", name: nil %>
+  <% end %>
+  
   <div class="d-flex mb-4">
     <%= link_to "Add Item", new_item_path, class: "btn btn-primary me-2 text-white" %>
     <%= link_to "View Member Items", member_items_path, class: "btn btn-secondary text-white" %>

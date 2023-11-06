@@ -6,6 +6,11 @@
     <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-warning text-white" %>
   </div>
 
+  <%= form_tag(member_items_path, method: :get) do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", name: nil %>
+  <% end %>
+
   <div class="row">
     <% @items.each do |item| %>
       <div class="col-md-4 mb-4">
