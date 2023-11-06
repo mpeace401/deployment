@@ -1,1 +1,1 @@
-release: rails db:migrate
+release: rails db:reset && rails db:migrate
